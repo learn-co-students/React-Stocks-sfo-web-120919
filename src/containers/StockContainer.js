@@ -7,9 +7,9 @@ class StockContainer extends Component {
     return (
       <div>
         <h2>Stocks</h2>
-        {
-          //render the list of stocks here
-        }
+        
+          {this.props.stocks.map(stock => <Stock onStockClick={this.props.onStockClick} stock={stock} key={Math.random()} />)}
+        
       </div>
     );
   }
